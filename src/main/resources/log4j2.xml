@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+
+        <File name="File" fileName="logs/log.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+<!--        <SMTP name="Mail"-->
+<!--              subject="lab4-8 log"-->
+<!--              to="EMAIL@gmail.com"-->
+<!--              from="EMAIL@gmail.com"-->
+<!--              smtpUsername="EMAIL@gmail.com"-->
+<!--              smtpPassword="PASSWORD"-->
+<!--              smtpHost="smtp.gmail.com"-->
+<!--              smtpPort="587"-->
+<!--              smtpProtocol="smtp"-->
+<!--              bufferSize="50">-->
+<!--            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%c{1}] %-5level %logger{36} - %msg%n"/>-->
+<!--            <AppenderRef ref="Mail" level="error"/>-->
+<!--        </SMTP>-->
+    </Appenders>
+
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="File"/>
+<!--            <AppenderRef ref="Mail"/>-->
+        </Root>
+    </Loggers>
+</Configuration>
+
